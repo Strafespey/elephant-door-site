@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Elephant Door</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #2a1c3a 0%, #12071f 100%);
+      color: #eee;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+    }
+    header h1 { font-size: 1.75rem; font-weight: 600; }
+    header a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    header a:hover { color: #fff; }
+    .post-list { list-style: none; }
+    .post-list li {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 1.25rem 0;
+    }
+    .post-list li:last-child { border-bottom: none; }
+    .post-list a {
+      text-decoration: none;
+      color: #ddd;
+      display: block;
+      transition: color 0.2s;
+    }
+    .post-list a:hover { color: #5b6ffa; }
+    .post-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+    .post-meta {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .post-summary {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 0.35rem;
+    }
+    .empty {
+      color: #666;
+      font-style: italic;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Blog</h1>
+      <a href="/">&larr; Back to Elephant Door</a>
+    </header>
+    <ul class="post-list" id="posts"></ul>
+    <p class="empty" id="empty" hidden>No posts yet. Check back soon!</p>
+  </div>
+  <script>
+    fetch('/blog/posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        const list = document.getElementById('posts');
+        if (!posts.length) {
+          document.getElementById('empty').hidden = false;
+          return;
+        }
+        posts.slice().reverse().forEach(p => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <a href="/blog/${p.slug}">
+              <div class="post-title">${p.title}</div>
+              <div class="post-meta">${p.date}</div>
+              ${p.summary ? `<div class="post-summary">${p.summary}</div>` : ''}
+            </a>`;
+          list.appendChild(li);
+        });
+      })
+      .catch(() => {
+        document.getElementById('empty').hidden = false;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Elephant Door</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #2a1c3a 0%, #12071f 100%);
+      color: #eee;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    nav {
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #fff; }
+    .post-date {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 1.5rem;
+    }
+    .post-content {
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .post-content h1 { font-size: 2rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .post-content h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .post-content h3 { font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .post-content p { margin-bottom: 1rem; }
+    .post-content a { color: #5b6ffa; text-decoration: underline; }
+    .post-content a:hover { color: #7b8fff; }
+    .post-content ul, .post-content ol { margin: 0.5rem 0 1rem 1.5rem; }
+    .post-content li { margin-bottom: 0.3rem; }
+    .post-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .post-content blockquote {
+      border-left: 3px solid #5b6ffa;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      color: #bbb;
+      background: rgba(255,255,255,0.03);
+      border-radius: 0 6px 6px 0;
+    }
+    .post-content code {
+      background: rgba(255,255,255,0.08);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: 'Consolas', 'Monaco', monospace;
+    }
+    .post-content pre {
+      background: rgba(0,0,0,0.4);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    .post-content pre code {
+      background: none;
+      padding: 0;
+      font-size: 0.85em;
+    }
+    .post-content hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin: 2rem 0;
+    }
+    .error {
+      color: #f66;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="/">&larr; Home</a>
+      <a href="/blog">&larr; All Posts</a>
+    </nav>
+    <div class="post-date" id="date"></div>
+    <div class="post-content" id="content">Loading…</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+  <script>
+    const slug = location.pathname.replace(/\/blog\//, '').replace(/\/$/, '');
+
+    fetch('/blog/posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        const meta = posts.find(p => String(p.slug) === slug);
+        if (meta) {
+          document.title = meta.title + ' – Elephant Door';
+          document.getElementById('date').textContent = meta.date;
+        }
+      })
+      .catch(() => {});
+
+    fetch(`/blog/posts/${slug}.md`)
+      .then(r => {
+        if (!r.ok) throw new Error('Not found');
+        return r.text();
+      })
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(() => {
+        document.getElementById('content').innerHTML =
+          '<p class="error">Post not found.</p>';
+      });
+  </script>
+</body>
+</html>
