@@ -4,5 +4,11 @@
     "title": "A blog!",
     "date": "2026-03-31",
     "summary": "and a new game!"
+  },
+  {
+    "slug": 2,
+    "title": "We have achieved multiplayer",
+    "date": "2026-04-01",
+    "summary": "and we had fun for 15 minutes."
   }
 ]
