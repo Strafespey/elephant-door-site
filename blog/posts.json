@@ -10,5 +10,11 @@
     "title": "We have achieved multiplayer",
     "date": "2026-04-01",
     "summary": "and we had fun for 15 minutes."
+  },
+  {
+    "slug": 3,
+    "title": "Working with multiple scenes",
+    "date": "2026-04-01",
+    "summary": "How I made it look less terrible"
   }
 ]
