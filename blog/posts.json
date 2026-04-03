@@ -1,20 +1,26 @@
 [
   {
     "slug": 1,
-    "title": "A blog!",
+    "title": "1 - A blog!",
     "date": "2026-03-31",
     "summary": "and a new game!"
   },
   {
     "slug": 2,
-    "title": "We have achieved multiplayer",
+    "title": "2 - We have achieved multiplayer",
     "date": "2026-04-01",
     "summary": "and we had fun for 15 minutes."
   },
   {
     "slug": 3,
-    "title": "Working with multiple scenes",
+    "title": "3 - Working with multiple scenes",
     "date": "2026-04-01",
     "summary": "How I made it look less terrible"
+  }
+  {
+    "slug": 4,
+    "title": "4 - Camera + Attack Animations",
+    "date": "2026-04-02",
+    "summary": "Plus some info about the character building system."
   }
 ]
