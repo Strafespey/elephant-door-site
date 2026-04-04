@@ -9,7 +9,7 @@
     "slug": 2,
     "title": "2 - We have achieved multiplayer",
     "date": "2026-04-01",
-    "summary": "and we had fun for 15 minutes."
+    "summary": "and we had fun for 15 minutes"
   },
   {
     "slug": 3,
@@ -21,6 +21,12 @@
     "slug": 4,
     "title": "4 - Camera + Attack Animations",
     "date": "2026-04-02",
-    "summary": "Plus some info about the character building system."
+    "summary": "Plus some info about the character building system"
+  }
+  {
+    "slug": 5,
+    "title": "5 - Really basic combat system",
+    "date": "2026-04-03",
+    "summary": "Hitting some goblins"
   }
 ]
