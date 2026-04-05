@@ -28,5 +28,11 @@
     "title": "5 - Really basic combat system",
     "date": "2026-04-03",
     "summary": "Hitting some goblins"
-  }
+  },
+  {
+    "slug": 6,
+    "title": "6 - Goblins strike back",
+    "date": "2026-04-04",
+    "summary": "Not super effectively"
+  },
 ]
