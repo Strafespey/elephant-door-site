@@ -40,5 +40,11 @@
     "title": "7 - UI Improvements",
     "date": "2026-04-08",
     "summary": "and hitbox/animation tweaks"
+  },
+  {
+    "slug": 8,
+    "title": "8 - A bunch of new stuff",
+    "date": "2026-04-11",
+    "summary": "Character creation, Wizard class, and new abilities"
   }
 ]
