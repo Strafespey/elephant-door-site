@@ -11,12 +11,23 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       background: linear-gradient(135deg, #2a1c3a 0%, #12071f 100%);
       color: #eee;
       padding: 2rem;
       text-align: center;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 3rem;
     }
     h1 {
       font-size: clamp(1.75rem, 5vw, 2.5rem);
@@ -56,7 +67,6 @@
     }
     .contact-btn {
       display: inline-block;
-      margin-top: 1rem;
       padding: 0.75rem 2rem;
       background: transparent;
       color: #fff;
@@ -86,19 +96,23 @@
   </style>
 </head>
 <body>
-  <h1>Elephant Door</h1>
-  <p>Check out my game!</p>
-  <div class="game-widget">
-    <iframe frameborder="0" src="https://itch.io/embed/2620878?bg_color=432a5e&amp;fg_color=ffffff&amp;link_color=5b6ffa&amp;border_color=432a5e" width="552" height="167"><a href="https://strafespey.itch.io/warlock">Warlock: Age of Entropy by strafespey</a></iframe>
-  </div>
-  <p class="blog-link">or read my blog!</p>
-  <a class="blog-btn" href="/blog">Blog</a>
-  <button class="contact-btn" type="button" onclick="
-    this.style.display='none';
-    document.getElementById('contact-email').hidden=false;
-  ">Contact Me</button>
-  <p id="contact-email" class="contact-email" hidden>
-    <a href="mailto:strafespey@gmail.com">strafespey@gmail.com</a>
-  </p>
+  <main>
+    <h1>Elephant Door</h1>
+    <p>Check out my game!</p>
+    <div class="game-widget">
+      <iframe frameborder="0" src="https://itch.io/embed/2620878?bg_color=432a5e&amp;fg_color=ffffff&amp;link_color=5b6ffa&amp;border_color=432a5e" width="552" height="167"><a href="https://strafespey.itch.io/warlock">Warlock: Age of Entropy by strafespey</a></iframe>
+    </div>
+    <p class="blog-link">or read my blog!</p>
+    <a class="blog-btn" href="/blog">Blog</a>
+  </main>
+  <footer>
+    <button class="contact-btn" type="button" onclick="
+      this.style.display='none';
+      document.getElementById('contact-email').hidden=false;
+    ">Contact Me</button>
+    <p id="contact-email" class="contact-email" hidden>
+      <a href="mailto:strafespey@gmail.com">strafespey@gmail.com</a>
+    </p>
+  </footer>
 </body>
 </html>
