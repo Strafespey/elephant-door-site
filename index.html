@@ -54,6 +54,35 @@
     .blog-btn:hover {
       background: #4a5cd9;
     }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 2rem;
+      background: transparent;
+      color: #fff;
+      border: 1px solid #5b6ffa;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-btn:hover {
+      background: rgba(91, 111, 250, 0.15);
+    }
+    .contact-email {
+      margin-top: 1rem;
+      color: #eee;
+      font-size: 1rem;
+    }
+    .contact-email a {
+      color: #5b6ffa;
+      text-decoration: none;
+    }
+    .contact-email a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -64,5 +93,12 @@
   </div>
   <p class="blog-link">or read my blog!</p>
   <a class="blog-btn" href="/blog">Blog</a>
+  <button class="contact-btn" type="button" onclick="
+    this.style.display='none';
+    document.getElementById('contact-email').hidden=false;
+  ">Contact Me</button>
+  <p id="contact-email" class="contact-email" hidden>
+    <a href="mailto:strafespey@gmail.com">strafespey@gmail.com</a>
+  </p>
 </body>
 </html>
