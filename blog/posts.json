@@ -46,5 +46,11 @@
     "title": "8 - A bunch of new stuff",
     "date": "2026-04-11",
     "summary": "Character creation, Wizard class, and new abilities"
+  },
+  {
+    "slug": 9,
+    "title": "9 - Working title change and combat system update",
+    "date": "2026-05-14",
+    "summary": "Along with a new class, stat trees, and more"
   }
 ]
