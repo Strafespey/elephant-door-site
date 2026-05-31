@@ -102,6 +102,17 @@
       width: 100%; height: 100%;
       border: none;
     }
+    .comments {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .comments h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #eee;
+    }
   </style>
 </head>
 <body>
@@ -112,6 +123,24 @@
     </nav>
     <div class="post-date" id="date"></div>
     <div class="post-content" id="content">Loading…</div>
+    <section class="comments">
+      <h2>Comments</h2>
+      <script src="https://giscus.app/client.js"
+              data-repo="Strafespey/elephant-door-site"
+              data-repo-id="R_kgDORI_-Gw"
+              data-category="General"
+              data-category-id="DIC_kwDORI_-G84C-Olb"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="purple_dark"
+              data-lang="en"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </section>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
   <script>
