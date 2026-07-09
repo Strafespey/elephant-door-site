@@ -82,5 +82,11 @@
     "title": "14 - Charms",
     "date": "2026-06-20",
     "summary": "A mechanic designed to increase exploration and replayability."
+  },
+  {
+    "slug": 15,
+    "title": "15 - Informal Playtest #3",
+    "date": "2026-07-08",
+    "summary": "New movement system, expansions to Western Forest zone, and ambient sounds."
   }
 ]
