@@ -203,7 +203,8 @@ function build() {
 		};
 		if (meta.out === 'blog/index.html') blogDescription = page.description;
 		if (!meta.no_sitemap) sitemapUrls.push(page.url);
-		emit(meta.out, render(body, page, { posts: posts.slice().reverse() }));
+		const newestFirst = posts.slice().reverse();
+		emit(meta.out, render(body, page, { posts: newestFirst, recent_posts: newestFirst.slice(0, 3) }));
 	}
 
 	// One page per post.

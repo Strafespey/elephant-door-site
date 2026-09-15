@@ -15,22 +15,44 @@
 </head>
 <body class="{{page.body_class}}">
   <main>
-    <h1>Elephant Door</h1>
-    <p>Check out my game!</p>
-    {{> store_widget}}
-    <p class="blog-link">or read my blog!</p>
-    <a class="btn" href="/blog/">Blog</a>
+    <header class="site-header">
+      <h1>Elephant Door</h1>
+      <nav class="site-nav">
+        <a href="/warlock/">Warlock</a>
+        <a href="/blog/">Blog</a>
+        <button class="link-btn" type="button" onclick="
+          this.hidden=true;
+          document.getElementById('contact-email').hidden=false;
+        ">Contact</button>
+      </nav>
+      <p id="contact-email" class="contact-email" hidden>
+        <a href="mailto:{{site.email}}">{{site.email}}</a>
+      </p>
+    </header>
+
+    <section class="home-section">
+      <p class="lead">Check out my game!</p>
+      {{> store_widget}}
+      {{> store_buttons}}
+    </section>
+
+    <section class="home-section">
+      <p class="lead">or read my blog!</p>
+      <ul class="post-list compact">
+        {{#recent_posts}}
+        <li>
+          <a href="/blog/{{slug}}/">
+            <span class="post-title">{{title}}</span>
+            <time class="post-meta" datetime="{{date}}">{{date}}</time>
+          </a>
+        </li>
+        {{/recent_posts}}
+      </ul>
+      <p class="all-posts"><a href="/blog/">All posts &rarr;</a></p>
+    </section>
+
     {{> newsletter}}
   </main>
-  <div class="contact">
-    <button class="btn btn-outline" type="button" onclick="
-      this.style.display='none';
-      document.getElementById('contact-email').hidden=false;
-    ">Contact Me</button>
-    <p id="contact-email" class="contact-email" hidden>
-      <a href="mailto:{{site.email}}">{{site.email}}</a>
-    </p>
-  </div>
 {{> footer}}
 </body>
 </html>

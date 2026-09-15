@@ -28,14 +28,13 @@ body.home main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-body.home.wide main {
   justify-content: flex-start;
-  max-width: 860px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
+body.home.wide main { max-width: 860px; }
+body.home.centered main { justify-content: center; }
 body.home h1 {
   font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: 600;
@@ -80,13 +79,47 @@ body.home main > p:empty { display: none; }
 .game-widget { margin-top: 0.5rem; max-width: 100%; }
 .game-widget iframe { display: block; border: none; max-width: 100%; }
 .blog-link { color: #aaa; margin-top: 2rem; margin-bottom: 0.75rem; }
-.contact {
+.site-header { width: 100%; padding: 1rem 0 0.5rem; }
+.site-nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
 }
-.contact-email { margin-top: 1rem; color: #eee; font-size: 1rem; }
+.site-nav a, .link-btn {
+  color: #aaa;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.site-nav a:hover, .link-btn:hover { color: #fff; text-decoration: none; }
+.home-section {
+  width: 100%;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.site-header + .home-section { border-top: none; margin-top: 0.5rem; }
+.home-section + .newsletter { margin-top: 0; }
+body.home:not(.wide) .site-footer { max-width: 600px; }
+.lead { color: #aaa; font-size: 1.1rem; margin-bottom: 1.25rem; }
+.post-list.compact { width: 100%; text-align: left; }
+.post-list.compact li { padding: 0.65rem 0; }
+.post-list.compact a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+.post-list.compact .post-title { font-size: 1.05rem; margin: 0; }
+.all-posts { margin-top: 0.75rem; font-size: 0.95rem; }
+.contact-email { margin-top: 0.75rem; color: #eee; font-size: 1rem; }
 .contact-email a { color: #5b6ffa; text-decoration: none; }
 .contact-email a:hover { text-decoration: underline; }
 
@@ -258,14 +291,12 @@ body.page h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5rem; }
 /* ---- Newsletter box (rendered only once the embed form is pasted in) ---- */
 .newsletter {
   width: 100%;
-  max-width: 480px;
-  margin: 2.5rem auto 0;
-  padding: 1.5rem;
-  border: 1px solid rgba(91, 111, 250, 0.35);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.03);
+  margin: 2rem auto 0;
+  padding: 2rem 0 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
   text-align: center;
 }
+.newsletter form { max-width: 480px; margin: 0 auto; }
 .newsletter h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
 .newsletter p { color: #aaa; margin-bottom: 1rem; }
 .newsletter form {

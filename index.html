@@ -25,15 +25,56 @@
 </head>
 <body class="home">
   <main>
-    <h1>Elephant Door</h1>
-    <p>Check out my game!</p>
-    <!-- Store widget: the Steam widget once site.json has the app ID, the itch embed until then. -->
-    <div class="game-widget">
-      <!-- TODO: the Steam widget replaces this itch embed automatically when game.steam_app_id is set in site.json -->
-      <iframe src="https://itch.io/embed/2620878?bg_color=432a5e&amp;fg_color=ffffff&amp;link_color=5b6ffa&amp;border_color=432a5e" width="552" height="167" title="Warlock: Age of Entropy on itch.io"><a href="https://strafespey.itch.io/warlock">Warlock: Age of Entropy by strafespey</a></iframe>
-    </div>
-    <p class="blog-link">or read my blog!</p>
-    <a class="btn" href="/blog/">Blog</a>
+    <header class="site-header">
+      <h1>Elephant Door</h1>
+      <nav class="site-nav">
+        <a href="/warlock/">Warlock</a>
+        <a href="/blog/">Blog</a>
+        <button class="link-btn" type="button" onclick="
+          this.hidden=true;
+          document.getElementById('contact-email').hidden=false;
+        ">Contact</button>
+      </nav>
+      <p id="contact-email" class="contact-email" hidden>
+        <a href="mailto:strafespey@gmail.com">strafespey@gmail.com</a>
+      </p>
+    </header>
+
+    <section class="home-section">
+      <p class="lead">Check out my game!</p>
+      <!-- Store widget: the Steam widget once site.json has the app ID, the itch embed until then. -->
+      <div class="game-widget">
+        <!-- TODO: the Steam widget replaces this itch embed automatically when game.steam_app_id is set in site.json -->
+        <iframe src="https://itch.io/embed/2620878?bg_color=432a5e&amp;fg_color=ffffff&amp;link_color=5b6ffa&amp;border_color=432a5e" width="552" height="167" title="Warlock: Age of Entropy on itch.io"><a href="https://strafespey.itch.io/warlock">Warlock: Age of Entropy by strafespey</a></iframe>
+      </div>
+      <!-- Wishlist button; appears under the store widget once site.json has the Steam app ID. The itch embed links itself. -->
+    </section>
+
+    <section class="home-section">
+      <p class="lead">or read my blog!</p>
+      <ul class="post-list compact">
+        <li>
+          <a href="/blog/15/">
+            <span class="post-title">15 - Informal Playtest #3</span>
+            <time class="post-meta" datetime="2026-07-08">2026-07-08</time>
+          </a>
+        </li>
+        <li>
+          <a href="/blog/14/">
+            <span class="post-title">14 - Charms</span>
+            <time class="post-meta" datetime="2026-06-20">2026-06-20</time>
+          </a>
+        </li>
+        <li>
+          <a href="/blog/13/">
+            <span class="post-title">13 - Informal Playtest #2</span>
+            <time class="post-meta" datetime="2026-06-13">2026-06-13</time>
+          </a>
+        </li>
+      </ul>
+      <p class="all-posts"><a href="/blog/">All posts &rarr;</a></p>
+    </section>
+
     <!-- Newsletter signup (Buttondown, account "strafespey"). Shown on the home page, the blog index, every post,
          /warlock and /press. RSS-to-email in Buttondown (Settings > RSS) should point at
          https://elephantdoorstudios.com/feed.xml so every blog post goes out as an email. -->
@@ -50,15 +91,6 @@
       </form>
     </section>
   </main>
-  <div class="contact">
-    <button class="btn btn-outline" type="button" onclick="
-      this.style.display='none';
-      document.getElementById('contact-email').hidden=false;
-    ">Contact Me</button>
-    <p id="contact-email" class="contact-email" hidden>
-      <a href="mailto:strafespey@gmail.com">strafespey@gmail.com</a>
-    </p>
-  </div>
 <footer class="site-footer">
   <nav class="footer-links">
     <a href="/">Home</a>
