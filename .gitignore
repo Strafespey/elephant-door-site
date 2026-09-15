@@ -1,1 +1,4 @@
 node_modules/
+
+# QA sheet from tools/make_icon.py --preview
+tools/icon_preview.png
