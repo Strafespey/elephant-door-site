@@ -11,28 +11,28 @@ The pages are plain HTML, pre-rendered by `tools/build.js`. A file that starts w
 |---|---|---|
 | A blog post | `blog/posts/<n>.md` (markdown; images in `blog/images/`; a YouTube URL on its own line becomes an embed) | `npm run build` |
 | Add a post | drop `blog/posts/<n>.md`, add its entry to `blog/posts.json` (slug, title, date `YYYY-MM-DD`, summary) | `npm run build` |
-| Home, /warlock, /press, blog index, 404 | `src/pages/*.html` (the JSON block at the top holds the title and description) | `npm run build` |
+| Home, /warlock, blog index, 404 (and the press kit, disabled: `out` is null in `src/pages/press.html`) | `src/pages/*.html` (the JSON block at the top holds the title and description) | `npm run build` |
 | Shared parts: meta tags, footer, newsletter box, store widget, gallery | `src/partials/*.html` | `npm run build` |
 | Facts and IDs: Steam app ID, trailer, price, date, Twitter handle, analytics code | `site.json` | `npm run build` |
 | Styles | `assets/site.css` | nothing |
-| Screenshots, GIFs, logos shown on /warlock and /press | drop files into `assets/screenshots/`, `assets/gifs/`, `assets/logos/` | `npm run build` |
+| Screenshots, GIFs, logos shown on /warlock (and the press kit once enabled) | drop files into `assets/screenshots/`, `assets/gifs/`, `assets/logos/` | `npm run build` |
 
 Setup once: `npm install` (Node 18 or newer). `npm run serve` previews the site at http://localhost:8080/ the way
 Pages serves it. `npm run check` lists generated files that are out of date; the GitHub Action runs it on every push,
 so a post pushed without a rebuild gets a red X (the site still deploys; rebuild, commit, push again).
 
-Generated files: `index.html`, `404.html`, `warlock/index.html`, `press/index.html`, `blog/index.html`,
+Generated files: `index.html`, `404.html`, `warlock/index.html`, `blog/index.html`,
 `blog/<n>/index.html`, `feed.xml` (RSS 2.0 with the full post text), `sitemap.xml`.
 
 ## Placeholders
 
-Everything marked `ALEX:` in `src/` and `site.json` is a slot:
+Everything marked `TODO:` in `src/` and `site.json` is a slot:
 
-- newsletter form: `src/partials/newsletter.html`; paste the Buttondown embed, remove `hidden`. Point Buttondown's RSS-to-email at `https://elephantdoorstudios.com/feed.xml`.
+- newsletter: the Buttondown form is in `src/partials/newsletter.html`. Blog posts reach subscribers only through Buttondown's RSS-to-email add-on (paid) pointed at `https://elephantdoorstudios.com/feed.xml`, or by sending each post by hand.
 - analytics: `site.json` > `analytics.code` (GoatCounter site code, or the domain for Plausible). No script is emitted while it is empty.
 - Steam app ID, trailer YouTube ID, Twitter handle, based-in, release date: `site.json`. The Steam widget, buttons and links appear once the app ID is set; the trailer sections once the video ID is set.
 - page descriptions (search results and link previews): the JSON block at the top of each file in `src/pages/`.
-- /warlock tagline and About text; /press Description, History, Features, Selected articles, About (each `hidden` until written); the Team name.
+- /warlock tagline and About text; in the disabled press kit, Description, History, Features, Selected articles, About (each `hidden` until written) and the Team name.
 - link-preview image: `assets/og/placeholder.png` is a flat purple card. Replace it with the capsule art at 1200x630 (same path, or change `default_image` in `site.json`). Posts use their first image instead.
 - favicon: `src/partials/head.html`.
 

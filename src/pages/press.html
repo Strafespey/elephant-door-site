@@ -1,8 +1,9 @@
 ---
 {
-  "out": "press/index.html",
+  "_note": "Press kit pulled from the site on 2026-09-14 (Alex: not for now). out is null so the build skips it; set it back to \"press/index.html\" to publish.",
+  "out": null,
   "title": "Press kit - Warlock: Age of Entropy",
-  "_description": "ALEX: one sentence for link previews of the press kit.",
+  "_description": "TODO: one sentence for link previews of the press kit.",
   "description": "",
   "og_type": "website",
   "body_class": "page"
@@ -21,7 +22,7 @@
     </nav>
 
     <h1>{{game.title}}: press kit</h1>
-    <!-- ALEX: the usual one-line permission note goes in the <p> below ("everything here may be used in coverage"),
+    <!-- TODO: the usual one-line permission note goes in the <p> below ("everything here may be used in coverage"),
          or delete the <p>. -->
     <p class="muted"></p>
 
@@ -53,21 +54,21 @@
       </dl>
     </section>
 
-    <!-- Prose sections. Each stays hidden until ALEX writes it: put the text inside the section as <p> elements
+    <!-- Prose sections. Each stays hidden until TODO writes it: put the text inside the section as <p> elements
          (or <li> in the lists) and delete the `hidden` attribute. -->
 
-    <!-- ALEX: Description: two or three paragraphs; the Steam "About This Game" text is the natural source. -->
+    <!-- TODO: Description: two or three paragraphs; the Steam "About This Game" text is the natural source. -->
     <section class="press-section text" hidden>
       <h2>Description</h2>
     </section>
 
-    <!-- ALEX: History: how the game came about (the itch release in 2024, the year of improvements, the Steam
+    <!-- TODO: History: how the game came about (the itch release in 2024, the year of improvements, the Steam
          release), one or two paragraphs. -->
     <section class="press-section text" hidden>
       <h2>History</h2>
     </section>
 
-    <!-- ALEX: Features: five to eight bullets. Numbers checked against the code at 0.99.7 on 2026-09-13
+    <!-- TODO: Features: five to eight bullets. Numbers checked against the code at 0.99.7 on 2026-09-13
          (Steam Page Copy.md in the vault): 3 playable foci; 15 floors; over 90 monster types; 62 item types;
          17 spells, 2 prayers, 3 active abilities, 9 perks; 2 boss fights (the Wizard on floor 10, the Four
          Horsemen on floor 15); 9 champion kinds; 6 special rooms; 3 gods, 16 karma events, 3 altar types;
@@ -129,7 +130,7 @@
     <!-- The Logo & icon section appears once there are files in assets/logos/ (wordmark, capsule art, icon; PNG with transparency where it applies). -->
     {{/logos.length}}
 
-    <!-- ALEX: Selected articles: <li><a href="...">Title</a>, Outlet</li> per piece of coverage. -->
+    <!-- TODO: Selected articles: <li><a href="...">Title</a>, Outlet</li> per piece of coverage. -->
     <section class="press-section text" hidden>
       <h2>Selected articles</h2>
       <ul>
@@ -146,7 +147,7 @@
       </ul>
     </section>
 
-    <!-- ALEX: About: who you are and what the studio is, one paragraph. -->
+    <!-- TODO: About: who you are and what the studio is, one paragraph. -->
     <section class="press-section text" hidden>
       <h2>About {{site.name}}</h2>
     </section>
@@ -154,7 +155,7 @@
     <section class="press-section text">
       <h2>Team</h2>
       <ul>
-        <li>Strafespey<!-- ALEX: the name you want in coverage (the credits use Strafespey) -->, everything</li>
+        <li>Strafespey<!-- TODO: the name you want in coverage (the credits use Strafespey) -->, everything</li>
       </ul>
     </section>
 
