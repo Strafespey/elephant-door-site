@@ -48,15 +48,25 @@
 <p>The character progression system itself I&#39;m thinking will give each class 3 skill trees.  Think kind of like World of Warcraft&#39;s talent trees (at least in Vanilla WoW through Cata).  These would be shorter than WoW&#39;s talent trees, and they&#39;d have a mix of active and passive abilities.  The warrior might have a tactics and a berserker tree; the rogue might have an assassination and an acrobatics tree, and so on.  I&#39;m thinking the level cap of this game will be around 30, so I&#39;d want each tier of the talent trees to unlock after 3 points of investment (at levels 4, 7, 10, so on).  The cool idea I had though, would be at level 10 and level 20 you can pick a talent tree from any other class.  This would mean a warrior could take the acrobatics tree from rogue at level 10.  I&#39;ll play with this idea but I&#39;m pretty excited about the potential.</p>
 
     </article>
-    <!-- Newsletter signup slot. Nothing is rendered while the <section> below carries the `hidden` attribute.
-         ALEX: once the Buttondown account exists, replace the comment inside the section with the embed form
-         (Buttondown > Settings > Embedding > "Embedded form", the plain HTML variant), delete `hidden`, and run
-         `npm run build`. The form's <input> and <button> already pick up the site styles (see .newsletter in
-         assets/site.css). Set up RSS-to-email in Buttondown with https://elephantdoorstudios.com/feed.xml so every
-         blog post goes out as an email. -->
-    <section class="newsletter" id="newsletter" hidden>
+    <!-- Newsletter signup (Buttondown, account "strafespey"). Shown on the home page, the blog index, every post,
+         /warlock and /press. RSS-to-email in Buttondown (Settings > RSS) should point at
+         https://elephantdoorstudios.com/feed.xml so every blog post goes out as an email. -->
+    <section class="newsletter" id="newsletter">
       <h2>Newsletter</h2>
-      <!-- ALEX: Buttondown embed form goes here -->
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/strafespey"
+        method="post"
+        class="embeddable-buttondown-form"
+      >
+        <label for="bd-email">Enter your email</label>
+        <input type="email" name="email" id="bd-email" />
+        <input type="submit" value="Subscribe" />
+        <p>
+          <a href="https://buttondown.com/refer/strafespey" target="_blank">
+            Powered by Buttondown.
+          </a>
+        </p>
+      </form>
     </section>
     <section class="comments">
       <h2>Comments</h2>

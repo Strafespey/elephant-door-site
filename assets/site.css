@@ -274,6 +274,14 @@ body.page h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5rem; }
   justify-content: center;
   gap: 0.5rem;
 }
+.newsletter form label { flex-basis: 100%; color: #aaa; font-size: 0.95rem; }
+.newsletter form p {
+  flex-basis: 100%;
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  color: #777;
+}
+.newsletter form p a { color: #888; }
 .newsletter input[type="email"], .newsletter input[type="text"] {
   flex: 1 1 200px;
   padding: 0.7rem 0.9rem;

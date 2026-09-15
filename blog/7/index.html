@@ -39,15 +39,25 @@
 <p>After this I&#39;ll probably start trying to implement some abilities and continue to work on the game feel.  I&#39;ve been thinking a lot about the stagger system recently.  My current design is to assign each ability a seperate stagger value (tied to damage in some respect, but with an extra layer for tuning).  The purpose of decoupling damage and stagger value is to provide classes like my wizard, that may have a very different damage profile (more AoE heavy) than other classes, the ability to stagger and knockdown with playing solo.  Consider an ice bolt spell for instance that has mediocre damage but very high knockdown potential - I&#39;d like the option to tune variables like this.  I also think I&#39;ll have a two-tiered system where a monster taking a certain accumulated stagger value will be staggered (animation interrupted), and if it is dealt in a swift timeframe it will cause a knockdown (long stun).</p>
 
     </article>
-    <!-- Newsletter signup slot. Nothing is rendered while the <section> below carries the `hidden` attribute.
-         ALEX: once the Buttondown account exists, replace the comment inside the section with the embed form
-         (Buttondown > Settings > Embedding > "Embedded form", the plain HTML variant), delete `hidden`, and run
-         `npm run build`. The form's <input> and <button> already pick up the site styles (see .newsletter in
-         assets/site.css). Set up RSS-to-email in Buttondown with https://elephantdoorstudios.com/feed.xml so every
-         blog post goes out as an email. -->
-    <section class="newsletter" id="newsletter" hidden>
+    <!-- Newsletter signup (Buttondown, account "strafespey"). Shown on the home page, the blog index, every post,
+         /warlock and /press. RSS-to-email in Buttondown (Settings > RSS) should point at
+         https://elephantdoorstudios.com/feed.xml so every blog post goes out as an email. -->
+    <section class="newsletter" id="newsletter">
       <h2>Newsletter</h2>
-      <!-- ALEX: Buttondown embed form goes here -->
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/strafespey"
+        method="post"
+        class="embeddable-buttondown-form"
+      >
+        <label for="bd-email">Enter your email</label>
+        <input type="email" name="email" id="bd-email" />
+        <input type="submit" value="Subscribe" />
+        <p>
+          <a href="https://buttondown.com/refer/strafespey" target="_blank">
+            Powered by Buttondown.
+          </a>
+        </p>
+      </form>
     </section>
     <section class="comments">
       <h2>Comments</h2>

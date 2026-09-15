@@ -38,15 +38,25 @@
 <p>I&#39;m dropping the weekly format for a while because I feel like it was pressuring me to report on all the little details of my progress.  I&#39;d rather just do a blogpost when I feel like something is interesting enough to share.  I was making a lot of posts at the start because everything was new, but I&#39;m moving more into the routine work of just fleshing out zones; so making blog posts at this point is just spoilers for the game.</p>
 
     </article>
-    <!-- Newsletter signup slot. Nothing is rendered while the <section> below carries the `hidden` attribute.
-         ALEX: once the Buttondown account exists, replace the comment inside the section with the embed form
-         (Buttondown > Settings > Embedding > "Embedded form", the plain HTML variant), delete `hidden`, and run
-         `npm run build`. The form's <input> and <button> already pick up the site styles (see .newsletter in
-         assets/site.css). Set up RSS-to-email in Buttondown with https://elephantdoorstudios.com/feed.xml so every
-         blog post goes out as an email. -->
-    <section class="newsletter" id="newsletter" hidden>
+    <!-- Newsletter signup (Buttondown, account "strafespey"). Shown on the home page, the blog index, every post,
+         /warlock and /press. RSS-to-email in Buttondown (Settings > RSS) should point at
+         https://elephantdoorstudios.com/feed.xml so every blog post goes out as an email. -->
+    <section class="newsletter" id="newsletter">
       <h2>Newsletter</h2>
-      <!-- ALEX: Buttondown embed form goes here -->
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/strafespey"
+        method="post"
+        class="embeddable-buttondown-form"
+      >
+        <label for="bd-email">Enter your email</label>
+        <input type="email" name="email" id="bd-email" />
+        <input type="submit" value="Subscribe" />
+        <p>
+          <a href="https://buttondown.com/refer/strafespey" target="_blank">
+            Powered by Buttondown.
+          </a>
+        </p>
+      </form>
     </section>
     <section class="comments">
       <h2>Comments</h2>
