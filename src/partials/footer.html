@@ -4,6 +4,13 @@
     <a href="/warlock/">Warlock</a>
     <a href="/blog/">Blog</a>
     <a href="/feed.xml">RSS</a>
+    <button class="link-btn" type="button" onclick="
+      this.hidden=true;
+      document.getElementById('contact-email').hidden=false;
+    ">Contact</button>
   </nav>
+  <p id="contact-email" class="contact-email" hidden>
+    <a href="mailto:{{site.email}}">{{site.email}}</a>
+  </p>
   <p class="legal">{{site.legal}}</p>
 </footer>
