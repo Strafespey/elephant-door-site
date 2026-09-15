@@ -1,0 +1,322 @@
+/* Shared stylesheet for elephantdoorstudios.com. The rules for the home page, the blog index and the
+   post pages are the ones that used to be inlined in each HTML file; the rest covers the Warlock
+   and press pages, the store buttons, galleries, the newsletter box and the footer. */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  background: #2a1c3a;
+  color: #eee;
+  padding: 2rem;
+}
+
+a { color: #5b6ffa; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Home-style pages (index, /warlock, 404): gradient, centred column ---- */
+body.home {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #2a1c3a 0%, #12071f 100%);
+  text-align: center;
+}
+body.home main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+body.home.wide main {
+  justify-content: flex-start;
+  max-width: 860px;
+  margin: 0 auto;
+}
+body.home h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+body.home main > p {
+  color: #aaa;
+  max-width: 32ch;
+  margin-bottom: 1.5rem;
+}
+body.home main > p:empty { display: none; }
+.key-art { max-width: 100%; height: auto; margin-bottom: 1rem; }
+.tagline { color: #aaa; }
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #5b6ffa;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #5b6ffa;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover { background: #4a5cd9; text-decoration: none; }
+.btn-outline { background: transparent; }
+.btn-outline:hover { background: rgba(91, 111, 250, 0.15); }
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+/* ---- Store widget, blog button, contact (home page) ---- */
+.game-widget { margin-top: 0.5rem; max-width: 100%; }
+.game-widget iframe { display: block; border: none; max-width: 100%; }
+.blog-link { color: #aaa; margin-top: 2rem; margin-bottom: 0.75rem; }
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+}
+.contact-email { margin-top: 1rem; color: #eee; font-size: 1rem; }
+.contact-email a { color: #5b6ffa; text-decoration: none; }
+.contact-email a:hover { text-decoration: underline; }
+
+/* ---- Content pages (blog, press): flat background, 720 px column ---- */
+.container { max-width: 720px; margin: 0 auto; }
+.top-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.top-nav a { color: #aaa; text-decoration: none; transition: color 0.2s; }
+.top-nav a:hover { color: #fff; }
+body.home .top-nav { justify-content: center; align-self: stretch; }
+body.page h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: 0.5rem; }
+.muted { color: #888; font-size: 0.9rem; }
+.muted:empty { display: none; }
+.press-link { margin-top: 2.5rem; }
+
+/* ---- Blog index ---- */
+.blog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.blog-header h1 { margin-bottom: 0; }
+.blog-header .top-nav { margin-bottom: 0; }
+.post-list { list-style: none; }
+.post-list li {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 1.25rem 0;
+}
+.post-list li:last-child { border-bottom: none; }
+.post-list a {
+  text-decoration: none;
+  color: #ddd;
+  display: block;
+  transition: color 0.2s;
+}
+.post-list a:hover { color: #5b6ffa; text-decoration: none; }
+.post-title { font-size: 1.25rem; font-weight: 500; margin-bottom: 0.25rem; }
+.post-meta { font-size: 0.85rem; color: #888; }
+.post-summary { font-size: 0.9rem; color: #aaa; margin-top: 0.35rem; }
+.empty { color: #666; font-style: italic; margin-top: 2rem; }
+
+/* ---- Blog post ---- */
+.post-date { font-size: 0.85rem; color: #888; margin-bottom: 1.5rem; }
+.post-content { line-height: 1.7; font-size: 1.05rem; }
+.post-content h1 { font-size: 2rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-content h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+.post-content h3 { font-size: 1.2rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.post-content p { margin-bottom: 1rem; }
+.post-content a { color: #5b6ffa; text-decoration: underline; }
+.post-content a:hover { color: #7b8fff; }
+.post-content ul, .post-content ol { margin: 0.5rem 0 1rem 1.5rem; }
+.post-content li { margin-bottom: 0.3rem; }
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+.post-content blockquote {
+  border-left: 3px solid #5b6ffa;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  color: #bbb;
+  background: rgba(255,255,255,0.03);
+  border-radius: 0 6px 6px 0;
+}
+.post-content code {
+  background: rgba(255,255,255,0.08);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+.post-content pre {
+  background: rgba(0,0,0,0.4);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+.post-content pre code { background: none; padding: 0; font-size: 0.85em; }
+.post-content hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 2rem 0;
+}
+.post-content table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.95em;
+  max-width: 100%;
+}
+.post-content th, .post-content td {
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.35rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+}
+.post-content th { background: rgba(255,255,255,0.05); }
+.yt-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.yt-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+.comments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.comments h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #eee; }
+
+/* ---- Warlock and press pages ---- */
+.block {
+  width: 100%;
+  max-width: 720px;
+  margin: 2rem auto 0;
+}
+.press-section { margin-top: 2.5rem; }
+.block h2, .press-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.text { line-height: 1.7; color: #ddd; }
+.text p { margin-bottom: 1rem; }
+.text ul { margin: 0.5rem 0 1rem 1.5rem; }
+.text li { margin-bottom: 0.3rem; }
+.text:empty { display: none; }
+.facts dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 1.25rem;
+  text-align: left;
+  line-height: 1.5;
+}
+.facts dt { color: #888; }
+.facts dd { color: #ddd; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.file-list { list-style: none; line-height: 1.8; }
+
+/* ---- Newsletter box (rendered only once the embed form is pasted in) ---- */
+.newsletter {
+  width: 100%;
+  max-width: 480px;
+  margin: 2.5rem auto 0;
+  padding: 1.5rem;
+  border: 1px solid rgba(91, 111, 250, 0.35);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  text-align: center;
+}
+.newsletter h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+.newsletter p { color: #aaa; margin-bottom: 1rem; }
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.newsletter input[type="email"], .newsletter input[type="text"] {
+  flex: 1 1 200px;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(0,0,0,0.3);
+  color: #eee;
+  font: inherit;
+}
+.newsletter input[type="submit"], .newsletter button {
+  padding: 0.7rem 1.5rem;
+  background: #5b6ffa;
+  color: #fff;
+  border: 1px solid #5b6ffa;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+.newsletter input[type="submit"]:hover, .newsletter button:hover { background: #4a5cd9; }
+
+/* ---- Footer ---- */
+.site-footer {
+  max-width: 720px;
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+.footer-links a { color: #aaa; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: #fff; }
+
+@media (max-width: 600px) {
+  body { padding: 1.25rem; }
+  .facts dl { grid-template-columns: 1fr; gap: 0.15rem 0; }
+  .facts dt { margin-top: 0.6rem; }
+}

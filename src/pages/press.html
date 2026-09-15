@@ -1,0 +1,170 @@
+---
+{
+  "out": "press/index.html",
+  "title": "Press kit - Warlock: Age of Entropy",
+  "_description": "ALEX: one sentence for link previews of the press kit.",
+  "description": "",
+  "og_type": "website",
+  "body_class": "page"
+}
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head}}
+</head>
+<body class="{{page.body_class}}">
+  <div class="container">
+    <nav class="top-nav">
+      <a href="/">&larr; Home</a>
+      <a href="/warlock/">&larr; Warlock</a>
+    </nav>
+
+    <h1>{{game.title}}: press kit</h1>
+    <!-- ALEX: the usual one-line permission note goes in the <p> below ("everything here may be used in coverage"),
+         or delete the <p>. -->
+    <p class="muted"></p>
+
+    <section class="press-section facts">
+      <h2>Fact sheet</h2>
+      <dl>
+        <dt>Developer</dt><dd>{{game.developer}} ({{game.developer_legal}})</dd>
+        {{#game.based_in}}
+        <dt>Based in</dt><dd>{{game.based_in}}</dd>
+        {{/game.based_in}}
+        {{#game.release_date_text}}
+        <dt>Release date</dt><dd>{{game.release_date_text}}</dd>
+        {{/game.release_date_text}}
+        <dt>Platforms</dt><dd>{{game.platforms}}</dd>
+        <dt>Availability</dt>
+        <dd>
+          {{#game.steam_url}}<a href="{{game.steam_url}}">Steam</a>, {{/game.steam_url}}<a href="{{game.itch_url}}">itch.io</a>
+        </dd>
+        <dt>Price</dt><dd>{{game.price}}</dd>
+        <dt>Genre</dt><dd>{{game.genre}}</dd>
+        <dt>Players</dt><dd>{{game.players}}</dd>
+        <dt>Languages</dt><dd>{{game.languages}}</dd>
+        <dt>Requirements</dt><dd>{{game.requirements}}</dd>
+        <dt>Website</dt><dd><a href="{{site.url}}/warlock/">{{site.url}}/warlock/</a></dd>
+        <dt>Press contact</dt><dd><a href="mailto:{{site.email}}">{{site.email}}</a></dd>
+        {{#site.twitter}}
+        <dt>Social</dt><dd><a href="https://twitter.com/{{site.twitter_handle}}">{{site.twitter}}</a></dd>
+        {{/site.twitter}}
+      </dl>
+    </section>
+
+    <!-- Prose sections. Each stays hidden until ALEX writes it: put the text inside the section as <p> elements
+         (or <li> in the lists) and delete the `hidden` attribute. -->
+
+    <!-- ALEX: Description: two or three paragraphs; the Steam "About This Game" text is the natural source. -->
+    <section class="press-section text" hidden>
+      <h2>Description</h2>
+    </section>
+
+    <!-- ALEX: History: how the game came about (the itch release in 2024, the year of improvements, the Steam
+         release), one or two paragraphs. -->
+    <section class="press-section text" hidden>
+      <h2>History</h2>
+    </section>
+
+    <!-- ALEX: Features: five to eight bullets. Numbers checked against the code at 0.99.7 on 2026-09-13
+         (Steam Page Copy.md in the vault): 3 playable foci; 15 floors; over 90 monster types; 62 item types;
+         17 spells, 2 prayers, 3 active abilities, 9 perks; 2 boss fights (the Wizard on floor 10, the Four
+         Horsemen on floor 15); 9 champion kinds; 6 special rooms; 3 gods, 16 karma events, 3 altar types;
+         permadeath, no meta-progression; 16 px hand-drawn art; auto-explore, map overview, records screen;
+         keyboard and mouse, no controller. -->
+    <section class="press-section text" hidden>
+      <h2>Features</h2>
+      <ul>
+      </ul>
+    </section>
+
+    {{#game.trailer_youtube_id}}
+    <section class="press-section">
+      <h2>Videos</h2>
+      {{> trailer}}
+    </section>
+    {{/game.trailer_youtube_id}}
+    {{^game.trailer_youtube_id}}
+    <!-- The Videos section appears once game.trailer_youtube_id is set in site.json. -->
+    {{/game.trailer_youtube_id}}
+
+    {{#screenshots.length}}
+    <section class="press-section">
+      <h2>Screenshots</h2>
+      {{> gallery}}
+    </section>
+    {{/screenshots.length}}
+    {{^screenshots.length}}
+    <!-- The Screenshots section appears once there are images in assets/screenshots/ (see src/partials/gallery.html). -->
+    {{/screenshots.length}}
+
+    {{#gifs.length}}
+    <section class="press-section">
+      <h2>GIFs</h2>
+      <div class="gallery">
+        {{#gifs}}
+        <figure>
+          <a href="{{src}}"><img src="{{src}}" alt="{{alt}}" loading="lazy"></a>
+        </figure>
+        {{/gifs}}
+      </div>
+    </section>
+    {{/gifs.length}}
+    {{^gifs.length}}
+    <!-- The GIFs section appears once there are GIFs in assets/gifs/ (the Sharing Saturday ones). -->
+    {{/gifs.length}}
+
+    {{#logos.length}}
+    <section class="press-section">
+      <h2>Logo &amp; icon</h2>
+      <ul class="file-list">
+        {{#logos}}
+        <li><a href="{{src}}">{{name}}</a></li>
+        {{/logos}}
+      </ul>
+    </section>
+    {{/logos.length}}
+    {{^logos.length}}
+    <!-- The Logo & icon section appears once there are files in assets/logos/ (wordmark, capsule art, icon; PNG with transparency where it applies). -->
+    {{/logos.length}}
+
+    <!-- ALEX: Selected articles: <li><a href="...">Title</a>, Outlet</li> per piece of coverage. -->
+    <section class="press-section text" hidden>
+      <h2>Selected articles</h2>
+      <ul>
+      </ul>
+    </section>
+
+    <section class="press-section text">
+      <h2>Links</h2>
+      <ul>
+        {{#game.steam_url}}<li><a href="{{game.steam_url}}">Steam</a></li>{{/game.steam_url}}
+        <li><a href="{{game.itch_url}}">itch.io</a></li>
+        <li><a href="/blog/">Blog</a> (<a href="/feed.xml">RSS</a>)</li>
+        {{#site.twitter}}<li><a href="https://twitter.com/{{site.twitter_handle}}">Twitter</a></li>{{/site.twitter}}
+      </ul>
+    </section>
+
+    <!-- ALEX: About: who you are and what the studio is, one paragraph. -->
+    <section class="press-section text" hidden>
+      <h2>About {{site.name}}</h2>
+    </section>
+
+    <section class="press-section text">
+      <h2>Team</h2>
+      <ul>
+        <li>Strafespey<!-- ALEX: the name you want in coverage (the credits use Strafespey) -->, everything</li>
+      </ul>
+    </section>
+
+    <section class="press-section text">
+      <h2>Contact</h2>
+      <p><a href="mailto:{{site.email}}">{{site.email}}</a></p>
+    </section>
+
+    {{> newsletter}}
+  </div>
+{{> footer}}
+</body>
+</html>

@@ -1,0 +1,14 @@
+{{#screenshots.length}}
+<div class="gallery">
+  {{#screenshots}}
+  <figure>
+    <a href="{{src}}"><img src="{{src}}" alt="{{alt}}" loading="lazy"></a>
+  </figure>
+  {{/screenshots}}
+</div>
+{{/screenshots.length}}
+{{^screenshots.length}}
+<!-- Screenshot gallery slot: drop PNG / JPG files into assets/screenshots/ (1920x1080 from the Pixel Perfect
+     fullscreen mode, the same set as the Steam page) and run `npm run build`; they are listed here in file-name
+     order, so name them 01-*.png, 02-*.png and so on. -->
+{{/screenshots.length}}

@@ -1,0 +1,6 @@
+{{#game.trailer_youtube_id}}
+<div class="yt-embed"><iframe src="https://www.youtube.com/embed/{{game.trailer_youtube_id}}" title="{{game.title}} trailer" allowfullscreen></iframe></div>
+{{/game.trailer_youtube_id}}
+{{^game.trailer_youtube_id}}
+<!-- Trailer slot: set game.trailer_youtube_id in site.json and this becomes a YouTube embed. -->
+{{/game.trailer_youtube_id}}

@@ -1,0 +1,17 @@
+{
+  "name": "elephant-door-site",
+  "private": true,
+  "description": "elephantdoorstudios.com - static site for GitHub Pages, pre-rendered by tools/build.js",
+  "scripts": {
+    "build": "node tools/build.js",
+    "check": "node tools/build.js --check",
+    "serve": "node tools/serve.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "marked": "^15.0.12",
+    "mustache": "^4.2.0"
+  }
+}

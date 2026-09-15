@@ -1,0 +1,46 @@
+---
+{
+  "_readme": "Template for every blog post; the build fills page.* from blog/posts.json and blog/posts/<slug>.md. Not written out by itself.",
+  "out": null,
+  "og_type": "article",
+  "body_class": "page"
+}
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head}}
+</head>
+<body class="{{page.body_class}}">
+  <div class="container">
+    <nav class="top-nav">
+      <a href="/">&larr; Home</a>
+      <a href="/blog/">&larr; All Posts</a>
+    </nav>
+    <div class="post-date"><time datetime="{{post.date}}">{{post.date}}</time></div>
+    <article class="post-content">
+{{{post.html}}}
+    </article>
+    {{> newsletter}}
+    <section class="comments">
+      <h2>Comments</h2>
+      <script src="https://giscus.app/client.js"
+              data-repo="Strafespey/elephant-door-site"
+              data-repo-id="R_kgDORI_-Gw"
+              data-category="General"
+              data-category-id="DIC_kwDORI_-G84C-Olb"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="purple_dark"
+              data-lang="en"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </section>
+  </div>
+{{> footer}}
+</body>
+</html>

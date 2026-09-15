@@ -1,0 +1,19 @@
+# Fails the push if a generated file (blog pages, feed.xml, sitemap.xml, ...) is out of date with its source,
+# which is what happens when a post is pushed without running `npm run build` first. The site still deploys;
+# this is only the red X that says to build and push again.
+name: Check generated files
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check

@@ -1,0 +1,45 @@
+---
+{
+  "out": "blog/index.html",
+  "title": "Blog - Elephant Door",
+  "_description": "ALEX: one sentence about the blog for link previews.",
+  "description": "",
+  "og_type": "website",
+  "body_class": "page"
+}
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head}}
+</head>
+<body class="{{page.body_class}}">
+  <div class="container">
+    <header class="blog-header">
+      <h1>Blog</h1>
+      <nav class="top-nav">
+        <a href="/">&larr; Back to Elephant Door</a>
+        <a href="/feed.xml">RSS</a>
+      </nav>
+    </header>
+    {{#posts.length}}
+    <ul class="post-list">
+      {{#posts}}
+      <li>
+        <a href="/blog/{{slug}}/">
+          <div class="post-title">{{title}}</div>
+          <div class="post-meta"><time datetime="{{date}}">{{date}}</time></div>
+          {{#summary}}<div class="post-summary">{{summary}}</div>{{/summary}}
+        </a>
+      </li>
+      {{/posts}}
+    </ul>
+    {{/posts.length}}
+    {{^posts.length}}
+    <p class="empty">No posts yet. Check back soon!</p>
+    {{/posts.length}}
+    {{> newsletter}}
+  </div>
+{{> footer}}
+</body>
+</html>

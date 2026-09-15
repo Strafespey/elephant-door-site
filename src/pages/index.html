@@ -1,0 +1,36 @@
+---
+{
+  "out": "index.html",
+  "title": "Elephant Door",
+  "_description": "ALEX: one sentence for search results and link previews (about 150 characters). Empty = the tags are emitted with no text.",
+  "description": "",
+  "og_type": "website",
+  "body_class": "home"
+}
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{> head}}
+</head>
+<body class="{{page.body_class}}">
+  <main>
+    <h1>Elephant Door</h1>
+    <p>Check out my game!</p>
+    {{> store_widget}}
+    <p class="blog-link">or read my blog!</p>
+    <a class="btn" href="/blog/">Blog</a>
+    {{> newsletter}}
+  </main>
+  <div class="contact">
+    <button class="btn btn-outline" type="button" onclick="
+      this.style.display='none';
+      document.getElementById('contact-email').hidden=false;
+    ">Contact Me</button>
+    <p id="contact-email" class="contact-email" hidden>
+      <a href="mailto:{{site.email}}">{{site.email}}</a>
+    </p>
+  </div>
+{{> footer}}
+</body>
+</html>

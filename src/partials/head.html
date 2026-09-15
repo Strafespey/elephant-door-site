@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{page.title}}</title>
+<meta name="description" content="{{page.description}}">
+<link rel="canonical" href="{{page.url}}">
+<link rel="alternate" type="application/rss+xml" title="{{site.feed_title}}" href="{{site.url}}/feed.xml">
+<link rel="stylesheet" href="/assets/site.css">
+<!-- ALEX: favicon slot. Once scripts/make_capsules.py has rendered the .ico from the capsule art, copy it to assets/favicon.ico and uncomment:
+<link rel="icon" href="/assets/favicon.ico"> -->
+<meta property="og:site_name" content="{{site.name}}">
+<meta property="og:type" content="{{page.og_type}}">
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:description" content="{{page.description}}">
+<meta property="og:url" content="{{page.url}}">
+<meta property="og:image" content="{{page.image}}">
+{{#page.published}}
+<meta property="article:published_time" content="{{page.published}}">
+{{/page.published}}
+<meta name="twitter:card" content="summary_large_image">
+{{#site.twitter}}
+<meta name="twitter:site" content="{{site.twitter}}">
+{{/site.twitter}}
+<meta name="twitter:title" content="{{page.title}}">
+<meta name="twitter:description" content="{{page.description}}">
+<meta name="twitter:image" content="{{page.image}}">
+{{{analytics}}}

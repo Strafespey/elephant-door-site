@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Elephant Door blog</title>
+    <link>https://elephantdoorstudios.com/blog/</link>
+    <atom:link href="https://elephantdoorstudios.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Elephant Door blog</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 Jul 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>15 - Informal Playtest #3</title>
+      <link>https://elephantdoorstudios.com/blog/15/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/15/</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>New movement system, expansions to Western Forest zone, and ambient sounds.</description>
+      <content:encoded><![CDATA[<h1>15 - Informal Playtest 3</h1>
+<p>This is the third informal playtest, showcasing the new Quick Step system, the ambient sounds, and some additions to the Western Forest.</p>
+<p><a href="https://youtu.be/nC2MX0xYTts">https://youtu.be/nC2MX0xYTts</a></p>
+<p>I&#39;m dropping the weekly format for a while because I feel like it was pressuring me to report on all the little details of my progress.  I&#39;d rather just do a blogpost when I feel like something is interesting enough to share.  I was making a lot of posts at the start because everything was new, but I&#39;m moving more into the routine work of just fleshing out zones; so making blog posts at this point is just spoilers for the game.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>14 - Charms</title>
+      <link>https://elephantdoorstudios.com/blog/14/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/14/</guid>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <description>A mechanic designed to increase exploration and replayability.</description>
+      <content:encoded><![CDATA[<h1>14 - Charms</h1>
+<p>I&#39;m trying to come up with systems that will encourage players to interact with the world instead of just trying to get XP.  I like to have this because, on repeat playthroughs, I&#39;ll want players to target certain things that require them to complete quests.  When you force players to do quests to get build-essential items, it adds something to the repeat playlist checklist besides just speedrunning the campaign and grinding XP.  I think Grim Dawn does a nice job of this with the constellation system forcing players to map out specific routes through the campaign to grab constellation points from shrines - but I think it would be nice to take a replayability element like that and provide a little more freedom for the player to make their own route.  To that end, I&#39;m introducing a slot on the player&#39;s equipment called a &quot;Charm&quot;.  A charm is just a little trinket that can only be acquired from completing a world quest (optional content), and has some sort of bespoke effect.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/14-charm.png" alt="charm"></p>
+<p>In this example, the charm provides some cooldown reduction to the dash, and some flat damage when passing through enemies.  I think this is not only nice as utility, but could potentially enable certain builds using some of the existing designed skills (more flat cooldown reduction on dodge from Footwork, more damage on the dash from Razor Dash).</p>
+<p>I&#39;ve been working on fleshing out the Western Forest zone, and that&#39;s probably where my attention will remain for a long while.  This first zone is really important for grabbing the player&#39;s attention while they&#39;re early on in the game.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/14-view.png" alt="View"></p>
+<p>See you next time!</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>13 - Informal Playtest #2</title>
+      <link>https://elephantdoorstudios.com/blog/13/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/13/</guid>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Showing off two new weapon types.</description>
+      <content:encoded><![CDATA[<h1>13 - Informal Playtest 2</h1>
+<p>This time we&#39;re demoing two new weapon types.  Sorry for the lack of upload last week, I was too busy playing Path of Exile 2 to make a significant update to the game!</p>
+<p><a href="https://youtu.be/iHoocUmoYbw">https://youtu.be/iHoocUmoYbw</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>12 - Lowlands and Backdrops</title>
+      <link>https://elephantdoorstudios.com/blog/12/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/12/</guid>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+      <description>The map is starting to take shape.</description>
+      <content:encoded><![CDATA[<h1>12 - Lowlands and Backdrops</h1>
+<p>This time I&#39;m going to be showing the start of the Lowlands zone - which was talked about as part of the initial loop of the game since the beginning.  This zone is intended to be the second zone players visit after clearing the Western Forest.  They player should be around level 5.</p>
+<p>Overlooking the lowlands (just the terrain, no trees or props yet)
+<img src="https://elephantdoorstudios.com/blog/images/12-lowlands.png" alt="Lowlands"></p>
+<p>I like the idea of a branching path.  You can see there are three forks in the road.  I&#39;ll probably have the questgiver for the zone specify that the quest objective is down the middle path, and the other two will be optional (likely involving world quests).</p>
+<p>I also implemented backdrops for the forest and lowlands zones.  Something I&#39;ve had to think about is how the borders for each zone will work.  The northern border of the playable area is mountains, but we&#39;ll need all the borders eventually. I think invisible walls makes the most sense (even if its kind of lame) because it lets me define a playable area where you can clearly see how the game would continue if you were to run in one direction.  I may come up with some way to not use an invisible wall (trees too thick to pass, a palisade wall too high to jump over) but until then, it&#39;ll be an invisible wall.  Here&#39;s the trees continuing on into the fog as seen from the top of the hill in the Western Forest.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/12-forest.png" alt="Forest"></p>
+<p>Finally, here&#39;s a view from above the entire playable area with the fog turned off - unfortunately the LoD is killing the town in the Western Forest, but you get the idea.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/12-big-view.png" alt="Overall"></p>
+<p>I had to turn the fade distance on trees way up because even from the top of the large hill in the forest, the trees back in the hub area were disappearing.</p>
+<p>I wanted to get the Lowlands into the game so I wouldn&#39;t have to stare into the void every time I got near the southern border of the Western Forest.  Now I&#39;ll go back to completing that zone - I still need to create the second half of the forest area, and the entire goblin village on top of the hill.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>11 - Informal Playtest #1.5</title>
+      <link>https://elephantdoorstudios.com/blog/11/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/11/</guid>
+      <pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate>
+      <description>Affix system rework and new stuff in the Western Forest region.</description>
+      <content:encoded><![CDATA[<h1>11 - Informal Playtest 1.5</h1>
+<p>This week&#39;s informal playtest is mostly going to be about the new content in the Western Forest zone and the affix system rework.</p>
+<p>Previously, an item was yellow if it had 1 affix, and green if it had 2.  This is still generally true, but I gave every affix a 10% chance to be a rare affix, which will have more stats than a normal one.  This means that green items have a 1% chance to have two rare affixes.  This is basically the same as the &quot;double rare&quot; system used in games like Grim Dawn.  Rare affixes in Project Alder are indicated by a purple asterisk next to the item name.</p>
+<p>I also increased the movespeed of both the player and enemies to compensate for the fact that the zones are quite large - I was looking for how this felt in the playtest.</p>
+<p>The noise suppression filter is messed up in this video, so there&#39;s some pretty heavy background noise from my end.  Sorry about this!  I&#39;ll have this fixed for the next playtest.  Thats the reason I called it 1.5 instead of 2 - I&#39;m keeping it unlisted for now.</p>
+<p><a href="https://youtu.be/gSMFPYYah2E">https://youtu.be/gSMFPYYah2E</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>10 - Informal Playtest #1</title>
+      <link>https://elephantdoorstudios.com/blog/10/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/10/</guid>
+      <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+      <description>Testing rogue skills</description>
+      <content:encoded><![CDATA[<h1>10 - Informal Playtest 1</h1>
+<p>This is the first of a series of informal playtests that I&#39;m planning to publish about Project Alder.</p>
+<p>Like I mentioned in the previous post, I&#39;m going to try to upload something at least once a week - sometimes that will be a playtest video like this.</p>
+<p><a href="https://www.youtube.com/watch?v=ei39A9-r9GI">https://www.youtube.com/watch?v=ei39A9-r9GI</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>9 - Working title change and combat system update</title>
+      <link>https://elephantdoorstudios.com/blog/9/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/9/</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+      <description>Along with a new class, stat trees, and more</description>
+      <content:encoded><![CDATA[<h1>9 - Working Title Change, Combat System Details</h1>
+<p>I haven&#39;t updated this blog in a month - that&#39;s not because I haven&#39;t been working on the game, it&#39;s the opposite.  I&#39;ve been working on the game a lot and haven&#39;t had the drive to update the blog.  I&#39;m going to start posting in a weekly format to try and ensure that I keep interested people informed about the development.  Some of these weekly uploads might just be a playtest or a video - others will be blog posts.</p>
+<p>First off, I&#39;ve decided to change the working title of the project.  I started with Project BN2 because it was a no-effort name based on a friends initials with the 2 representing that this is the second time I&#39;ve worked on a project in Unity.  My brother Jake told me that the name was not super memorable, and if I was going to advertise this game before I had a proper title, I should get a better working title.  So from now on, this project will be referred to as &quot;Project Alder&quot;.  I like this name because nothing comes up on google when you search for Project Alder, and Alder Town is the name of the Act 1 hub that a lot of the game will be based around.  Without further ado, I&#39;ll dive into the details of the damage pipeline.</p>
+<p>Damage is divided into two broad categories, each having three subcategories.  There&#39;s Physical damage with Bludgeoning, Cutting, and Piercing as subcategories, and there&#39;s Magical damage with Fire, Ice, and Energy.  The player has two damage stats: a physical damage stat and a magical damage stat.  These stats are summed up from your primary attributes (Strength, Dexterity, Intellect, and Vitality), your equipment bonuses, and your skills (more on this later).</p>
+<p>Each subcategory then has an additive multiplier (for example, +30% damage to piercing).  Active skills (like sunder or the fireball, from the last blog post) have a multiplier attached to them which just indicates the damage of the skill (single target will do more than AoE for example).  Finally, there are certain other multipliers or bonuses you can gain from investing in passive skills.</p>
+<p>The final, pre-mitigation damage formula then looks like this (piercing damage example): Physical Damage * Piercing Additive Multiplier * Skill Damage Multiplier * Bonus Multipliers.</p>
+<p>Mitigation is similar.  You have two broad mitigation stats, and then fine-grained resists for the subcategories.  The mitigation stats per type are Armor and Magic Armor.  Subtype resistances go up to 70% linearly; this means that if you get a piece of equipment that says 10% fire resist, its just 10% fire resist.  Armors on the other hand are based on attacker level - you&#39;ll need more armor to achieve 10% mitigation against a level 15 attacker than a level 10 attacker.  Armors then, have a linear soft cap at 50% with an 80% hard cap that scales logarithmically after the soft cap is reached.  The full 80% hardcap requires about 6x the armor as the soft cap.  I&#39;m designing this with the expectation that most players in the end game will try to reach the soft cap, but dedicated builds can show class fantasy through substantial mitigation.</p>
+<p>Now to the mitigation formula.  Damage taken is reduced by the subcategory resistance first, then the remaining is passed to the armor.  So if my opponent attacks me for 100 piercing damage, and I have 70% piercing resist and 50% armor: I will take 100 * 0.3 * 0.5 = 15 damage.  You can see from this that the mitigation cap is 94%.</p>
+<p>Pic - some semi-complex combat logging (and the training dummy).
+<img src="https://elephantdoorstudios.com/blog/images/9-CoolCombatLogs.png" alt="Cool combat logs"></p>
+<p>Now we come to the topic of hybrid damage.  There is one skill I&#39;ve added to the game called &quot;Vicious Mana&quot;.  This is a Rogue skill in the Dark Arts tree (I&#39;ll follow up at some point with descriptions of the skill trees I&#39;ve decided on).  This skill makes it so that your energy damage will do an additional 10/20/30% piercing damage.  How is this piercing damage actually calculated - what does 30% additional piercing damage mean?  Whenever we say an ability will do some percent or multiplier on a type of damage, we will calculate based off of the root damage type: for piercing that means physical.  This means that this skill has you using your magic damage stat to deal energy damage, then your physical damage stat to deal the piercing damage.  Think about this for a minute - I think that this enables the greatest build variety.  It rewards players who (as a shallow tier 1 dip) have high physical/piercing damage but occasionally do energy damage (from a weapon proc or something) because that 30% piercing damage will actually end up being a lot.  At the same time, it doesn&#39;t make sense as a pick for pure magic damage builds, so people won&#39;t just multiclass into the Dark Arts tree to pick up what would otherwise be a &quot;free 30% damage&quot;.</p>
+<p>I&#39;ll follow up this post in the next few days with a playtest video featuring the new Rogue class.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>8 - A bunch of new stuff</title>
+      <link>https://elephantdoorstudios.com/blog/8/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/8/</guid>
+      <pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Character creation, Wizard class, and new abilities</description>
+      <content:encoded><![CDATA[<h1>8 - A bunch of new stuff</h1>
+<p>I&#39;ve been working on trying to get some abilities into the game, and I also wanted to start immediately working on my second class, the Wizard.  The reason is simply because I want to start playing this game with my friends soon and I need some variety.  I&#39;ve tentatively called the melee class &quot;Warrior&quot;, but I&#39;ll probably rename it to &quot;Soldier&quot; because &quot;Fighter&quot; sounds too much like DnD and &quot;Warrior&quot; takes up the W for Wizard.  Since I discussed about the build system a bit, which involves taking trees from other classes, I&#39;m guessing people will abbreviate their builds with the letter of the main class + acronyms for the extra trees.  Example might be &quot;WTaAc&quot; - &quot;Wizard with Tactics and Acrobatics&quot;.  I want to get out of the way of having an abbrevation conflict, so I&#39;ll probably rename it.</p>
+<p>Anyways, here&#39;s a quick demo of the character creation screen (which extremely rough for fast prototyping, don&#39;t take any of this to be a final product) and also the Wizard&#39;s basic attack, which I think is very cool.</p>
+<p><a href="https://youtu.be/iBDLy3EmDuI">https://youtu.be/iBDLy3EmDuI</a></p>
+<p>I&#39;m leveraging an awesome VFX pack that I got on sale to create this and the other effects.  I opted for playing the cast vfx and spawning the projectile disjointed from the player position because I think its cool; as a benefit, I don&#39;t have to try to align the cast vfx with a swinging staff animation.  It&#39;s lazy and it looks good; I did the same thing with the fireball ability:</p>
+<p><a href="https://youtu.be/-XYXxRp2kA4">https://youtu.be/-XYXxRp2kA4</a></p>
+<p>In this video, you can see I&#39;m using Unity&#39;s spacial blend feature with sound effects to make further away sounds quieter.  It&#39;s really nice that Unity has these kinds of utilities out of the box - I&#39;m used to trying to build my own engine where all these details are super tricky.  I also like having the confidence that these kinds of systems will &#39;just work&#39; in multiplayer.</p>
+<p>Finally, I updated the warrior&#39;s ability with some VFX too.  This does NOT look as good as the wizard abilities - I need more work on refining the animation and vfx here, but its ok for a playable prototype.</p>
+<p><a href="https://youtu.be/jKq4l8F-8kM">https://youtu.be/jKq4l8F-8kM</a></p>
+<p>I created a whole projectile system in the game for the Wizard - I want to work on some goblin archers sometime soon.  Archers are going to be key enemies in this game because the ranged pressure is going to push the combat forward instead of letting the player kite melee with ease.  I also think it&#39;s nearly time to start implementing my skill trees and level up system.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>7 - UI Improvements</title>
+      <link>https://elephantdoorstudios.com/blog/7/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/7/</guid>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+      <description>and hitbox/animation tweaks</description>
+      <content:encoded><![CDATA[<h1>7 - UI improvements</h1>
+<p>This is primarly an ability based game.  You&#39;re going to build abilities that seem fun to play and then use them to kill enemies.  I wanted to make the UI very intuitive and enjoyable to use.  For ability slots I think the World of Warcraft system is basically perfect and needs no further refinement.  You just drag abilities into the slots you want with hotkeys assigned to them, and you can source ability icons from a spellbook that has everything.</p>
+<p>I also made some improvements (marginally) to the hitboxes (player and enemy) and the goblin animations.  It still looks janky and requires more layers of refinement, but for now I think it&#39;s acceptable for a demo.</p>
+<p><a href="https://youtu.be/7evHtOq7i4s">https://youtu.be/7evHtOq7i4s</a></p>
+<p>After this I&#39;ll probably start trying to implement some abilities and continue to work on the game feel.  I&#39;ve been thinking a lot about the stagger system recently.  My current design is to assign each ability a seperate stagger value (tied to damage in some respect, but with an extra layer for tuning).  The purpose of decoupling damage and stagger value is to provide classes like my wizard, that may have a very different damage profile (more AoE heavy) than other classes, the ability to stagger and knockdown with playing solo.  Consider an ice bolt spell for instance that has mediocre damage but very high knockdown potential - I&#39;d like the option to tune variables like this.  I also think I&#39;ll have a two-tiered system where a monster taking a certain accumulated stagger value will be staggered (animation interrupted), and if it is dealt in a swift timeframe it will cause a knockdown (long stun).</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>6 - Goblins strike back</title>
+      <link>https://elephantdoorstudios.com/blog/6/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/6/</guid>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Not super effectively</description>
+      <content:encoded><![CDATA[<h1>6 - Goblins strike back.</h1>
+<p>This is an area that&#39;s just going to take some polish.  I added goblin animations to the game (just reusing some of the free placeholder ones I already have).  Them walking around hunched over looks cool, but the attacks look pretty terrible.  First of all, all of the attacks I have them use seem to have some sort of angle baked into them that makes the targetting off when the player is standing still.  Second, I have to tune the distance they choose to attack at very precisely (otherwise they miss even harder).  I&#39;ll probably try to get some snappier animations for the enemy NPCs - or if I do use wide swings like these, I&#39;ll tune the angle and distance precisely for each attack and probably let them cheat with bigger hitboxes.  I&#39;m trying to find a nice balance between an action game and an ARPG.</p>
+<p>Here&#39;s today&#39;s video:</p>
+<p><a href="https://youtu.be/SJk7NoB3YLA">https://youtu.be/SJk7NoB3YLA</a></p>
+<p>You might notice the debug mode I implemented.  This was a really nice idea I had to make it a lot easier to tune the hitboxes.  I figure I&#39;m going to be doing a lot of this in the future so I might as well set up some tools now.  I also added an xp bar and a health bar - these function exactly how you&#39;d expect.</p>
+<p>Next I&#39;ll probably work on tuning this group of goblins further and maybe adding an active skill for the player.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>5 - Really basic combat system</title>
+      <link>https://elephantdoorstudios.com/blog/5/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/5/</guid>
+      <pubDate>Fri, 03 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Hitting some goblins</description>
+      <content:encoded><![CDATA[<h1>5 - Really Basic Combat System</h1>
+<p>I&#39;m going to keep it really short today.  I added some goblin models (with slight randomization applied to them) into the game as enemies.  I then worked on hitboxes and hurtboxes for the player character - and finished with some damage flash and damage numbers.  This is all super rough but I just wanted to get the broad concepts in place and refine over time.</p>
+<p><a href="https://youtu.be/TYWJ9Ht29BY">https://youtu.be/TYWJ9Ht29BY</a></p>
+<p>Next I&#39;ll let him fight back.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>4 - Camera + Attack Animations</title>
+      <link>https://elephantdoorstudios.com/blog/4/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/4/</guid>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Plus some info about the character building system</description>
+      <content:encoded><![CDATA[<h1>4 - Camera + Attack animations</h1>
+<p>I want to clarify the purpose of this blog is mostly for progress updates on the new game.  It will include a bit of technical details but I&#39;m not planning to make it a technical blog.  We&#39;ll mainly just cover what&#39;s going on in the latest build and talk about some of my design philosophy.</p>
+<p>This post will just be an update about what I worked on today.  First of all, I added a crosshair - this is going to be important because there will be many abilities that are targetted, and most abilities will be at least somewhat directional.  When I added the crosshair, I realized that the player character was too centered in the screen, so I moved the player character to the bottom 1/3rd of the screen instead.  This is the approach used by most over the shoulder games (I mean it&#39;s called over the shoulder for a reason, right?), I just didn&#39;t realize until I loaded up the game with the crosshair stuck directly in the character&#39;s back.</p>
+<p>This is how the crosshair looks after I fixed that.
+<img src="https://elephantdoorstudios.com/blog/images/4_crosshair.png" alt="Crosshair"></p>
+<p>Next I started thinking about attack animations.  For our first class, which will be a warrior archetype, I started by implementing a two swing combo used by holding the left mouse button.  I used two masks to seperate the upper half and lower half of the body&#39;s animations, so that I could have the legs walking while the torso was swinging.  This doesn&#39;t look <em>perfect</em> but it looks pretty good (and I&#39;m still essentially using placeholder animations here - just throwing it together for speed and prototyping).  I&#39;m actually pretty happy with how they turned out.  I also added a shader to the player character so the shadows don&#39;t affect him so much.</p>
+<p>My brother Jake doing a jump attack while I look at the sun (showing the new shader).
+<img src="https://elephantdoorstudios.com/blog/images/4_sun.png" alt="Sun"></p>
+<p>Finally, I worked a lot on the camera.  It still needs some work, I need a better strategy for handling the camera getting stuck on walls, but I have a nice system in place.  Hard walls (like houses, terrain) block the camera, and it moves along the surface of the wall (closer to the player).  Everything else gets a dither shader applied to it to give it partial transparency and to signal to the player &quot;you&#39;re looking through a solid object&quot;.  This is the approach games like Genshin Impact use and it works perfect here too.  I&#39;m super happy how it turned out.</p>
+<p>Here you can see a tree faded out by the dithering shader.
+<img src="https://elephantdoorstudios.com/blog/images/4_dithering.png" alt="Dithering"></p>
+<p>Finally, I spent some time thinking about the character building systems.  My current idea is that every weapon will have an active ability tied to it (think a thrust attack for a rapier or a wide swing for a greatsword).  The attacks will have different physical animations as well as different interactions with the stat system.  For example, you might be able to do extra piercing damage with your build, and you&#39;d want a rapier with a piercing active ability.  I&#39;d also allow for the player to extract abilities and put them into other weapons using the crafting system (within reason, no piercing attacks on a mace for example).</p>
+<p>The nice thing about this idea is it gives the player an active skill to work with right out of the gate, without any research into the character progression system.  I&#39;d even have something like a blacksmith in town with a variety of level 1 weapons - I&#39;d give the player just enough gold to buy whichever they liked to ensure that skilled players can play with the active skills they like immediately.</p>
+<p>The character progression system itself I&#39;m thinking will give each class 3 skill trees.  Think kind of like World of Warcraft&#39;s talent trees (at least in Vanilla WoW through Cata).  These would be shorter than WoW&#39;s talent trees, and they&#39;d have a mix of active and passive abilities.  The warrior might have a tactics and a berserker tree; the rogue might have an assassination and an acrobatics tree, and so on.  I&#39;m thinking the level cap of this game will be around 30, so I&#39;d want each tier of the talent trees to unlock after 3 points of investment (at levels 4, 7, 10, so on).  The cool idea I had though, would be at level 10 and level 20 you can pick a talent tree from any other class.  This would mean a warrior could take the acrobatics tree from rogue at level 10.  I&#39;ll play with this idea but I&#39;m pretty excited about the potential.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>3 - Working with multiple scenes</title>
+      <link>https://elephantdoorstudios.com/blog/3/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/3/</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <description>How I made it look less terrible</description>
+      <content:encoded><![CDATA[<h1>3 - On scene transitions</h1>
+<p>Blending two scenes together in Unity is kind of a pain.  There&#39;s not really a good way to match two terrain objects up perfectly at the seam (that I&#39;ve found).  The benefits of using scenes and loading / unloading them in a smart manner are too good to ignore, so I have to figure out a good way to manage these transitions.  For this game I&#39;ve decided I can afford to be a little liberal in how I load scenes (given that we&#39;re low poly).  I&#39;ll probably stick to loading scenes obstructed by terrain and assets (like hallways) well in advance of when they&#39;re needed, just to prioritize a seamless feeling.</p>
+<p>Speaking of seams
+<img src="https://elephantdoorstudios.com/blog/images/3_seam.png" alt="Seam"></p>
+<p>I had to come up with a way to make sure there weren&#39;t seams at the edges of the scenes.  My first idea was to just match the terrain y-level as nicely as possible - but no matter how I did it, there was always a bit of seam.  Next I tried a much more successful idea of having the two terrain objects overlap by 10 units.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/3_nice_blending.png" alt="not bad"></p>
+<p>This works ok when the scene is pretty busy, but not so well when you&#39;re looking at a well defined texture on the floor, like road:
+<img src="https://elephantdoorstudios.com/blog/images/3_blending.png" alt="ouch"></p>
+<p>I felt like this approach had to be the right way to do it, but there was too much &quot;fighting&quot; for the texture that would appear on top between two nearly-even terrain surfaces.  I ended up elevating the terrain of the forest level by 0.04 units to try and reduce this effect and it was pretty successful.  All I had to do after that was to hide the &#39;crease&#39; by spamming more objects around it (ideally on top of it so you don&#39;t see it at all).  Here&#39;s what the transition looks like now that I&#39;ve filled the forest with some trees and foliage and dropped some assets on the crease.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/3_looking_at_it.png" alt="good"></p>
+<p>That&#39;s looking directly at the crease.  You can still see that there&#39;s a bit of an artifact there if you stare at it.  Normally, however, you&#39;ll see it more like this:</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/3_normally.png" alt="really good"></p>
+<p>That should be good enough.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>2 - We have achieved multiplayer</title>
+      <link>https://elephantdoorstudios.com/blog/2/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/2/</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <description>and we had fun for 15 minutes</description>
+      <content:encoded><![CDATA[<h1>2 - We have achieved multiplayer</h1>
+<p>Unity Netcode for Game Objects (NGO) is amazing.  I can see why so many people create asset-flip slop games for some goofy multiplayer concept like &quot;X simulator&quot; or some parkour game with a mess of props to climb up.  I built a copy for my friend to test multiplayer with and it just worked pretty much out of the box.  I had to iterate a few times on broken animations, crashing, etc. but the physics and the netcode are solid.  </p>
+<p>One key detail that I&#39;ve been thinking about is how I&#39;m going to synchronize players who are in different scenes.  I&#39;ve already decided on a P2P, client-authoritative model (i.e. the host doesn&#39;t validate or reconcile the client&#39;s network data).  I don&#39;t really care about people using cheated characters or hacking down the line - I&#39;m going to rely on lobby hosts to decide what they will and will not put up with in their lobbies (I&#39;m assuming based on the structure of the game, 90% or more of the players will want to play in private lobbies anyway).  I decided that for the purposes of zone synchronization, I&#39;m just going to store critical information in a ZoneInfo class (stuff like which enemies have been killed, is there loot on the ground, etc).  This is a lightweight file that the host can use to sync up other players after a scene has been altered without having to keep the scene loaded for the host all the time.  I also am going to use a &quot;Zone Leader&quot; system where a client temporarily acts as a host for a specific zone&#39;s enemies.</p>
+<p>The first player to enter a zone where the host isn&#39;t present becomes a Zone Leader for that zone.  If the Zone Leader leaves, leadership passes to the next client in the zone (lowest ClientId or similar metric).  Finally, if the host enters the zone, the zone leader transfers to the host.  I&#39;ll give an example to show why a system like this is useful.</p>
+<p>Host: killing goblins in the forest</p>
+<p>Player A and B: killing skeletons in the lowlands</p>
+<p>In the regular host-client model, if Player A hits a skeleton, that data has to get sent to the host, then the host needs to send that data to Player B&#39;s client.  If Player A is instead a zone leader, then this eliminates a redundant network call.  In the case of many players in many zones, we would reduce the burden on the host significantly (imagine a scenario with 16 players across 8 zones).  This is all probably unnecessary premature optimization, but I&#39;d rather have a tight optimization plan which I can slowly loosen as permissable then have a sloppy optimization plan and worry about it years from now.  I boxed myself into a corner when I developed Warlock: Age of Entropy by relying on libtcod for python as the basis of the engine; I want to have flexibility down the line in this project.</p>
+<p>Anyways here&#39;s a picture of me and my friend in the game together:
+<img src="https://elephantdoorstudios.com/blog/images/cool_image.png" alt="Cool picture"></p>
+<p>Next I might work on adding a new scene to the game (and also polishing the starting hub - the shadows are too dark and the town is too small imo). A lot of logic for my premature optimization is based on scene loading/unloading, and it might be time to start getting those systems set up.  I also need an automated testing strategy.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>1 - A blog!</title>
+      <link>https://elephantdoorstudios.com/blog/1/</link>
+      <guid isPermaLink="true">https://elephantdoorstudios.com/blog/1/</guid>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <description>and a new game!</description>
+      <content:encoded><![CDATA[<h1>1 - A blog!</h1>
+<p>I&#39;m making a new game.  I spent most of the last year making improvements to Warlock: Age of Entropy for a steam release, but I&#39;ve been really inspired by my new game idea so I&#39;ve put that on the back-burner for now.  I apologize to any Warlock fans who have been languishing without an update on the itch.io page for over a year now; I&#39;m still planning on doing a Steam version at some point (with a price point ~$5), but if you email me at <a href="mailto:strafespey@gmail.com">strafespey@gmail.com</a> and you want to play the new version, I&#39;ll just send you a copy for free.  There really are a ton of improvements to Warlock that I have just been working on in secret - a religion system, sound and visual effects, a new boss, many new spells, etc.</p>
+<p>I decided I wanted to make an ARPG that controls from an over-the-shoulder perspective with WASD to move.  There&#39;s a lot of awesome indie games that fill a <em>similar</em> niche (for example, Risk of Rain 2), but I have yet to see a fully-realized ARPG with a character building system and multiple acts done in this way.  I&#39;ve thought a lot about worldbuilding in some of my prototype ideas that never saw fruition, so I&#39;ve been really excited to flex my worldbuilding muscle through a 3D game.  The idea of making a 3D game was really daunting to me, since I thought it would require exponentially more work than creating a 2D game.  Honestly, though, Unity is so great for 3D, and I&#39;m making progress very quickly.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/just_terrain.png" alt="Just Terrain"></p>
+<p>It&#39;s pretty daunting to start a new project in Unity.  I started by just adding some terrain and coloring it.  Since I&#39;m going with a low-poly style, I think the simple monocolor textures on terrain work fine.</p>
+<p>I envision Act 1 to start in a central quest hub (in a coniferous forest), where the player will be asked to travel west into the Forest to do some quests (maybe killing an alpha wolf that has been terrorizing the villagers, I haven&#39;t decided yet).  The second zone will be a lowlands swamp.  Both of these will branch off of the hub and the player will return to the hub in-between.  Eventually, the player will head east into another forest, with some higher level enemies (some goblin packs and bandit scouts).  This forest, instead of leading back into the hub, will progress continuously toward the finale of the act.</p>
+<p>We&#39;ll go from this second forest into a bandit village built on the side of a cliff (lots of verticality to play with).  From there, we&#39;ll be up on the cliff in the highlands, which will be a more liminal zone to break the pace of the intense bandit village.  Finally we&#39;ll end in some sort of castle.  I&#39;ll polish up these ideas with sidequests and maybe some auxillary zones, but I think this is a pretty decent idea for an Act 1.  I&#39;ll also have a cave with multiple entrances connecting the 3 starting zones.  It will look something like this:</p>
+<pre><code>                      ┌───────────────┐
+              ┌──────►│    Forest     │ (warm-up, tutorial)
+              │       │   w/ Cave     │
+              │       └───────┬───────┘
+              │               │ (cave system loops back
+              │               │  to hub + branches to lowlands)
+              │               ▼
+       ┌──────┴──────┐      cave
+       │  ALDER TOWN │◄────entrance ──────────────────┐
+       └──┬───────┬──┘                                │
+          │       │   ┌───────────────┐    cave       │
+          │       └──►│  The Lowlands │◄──entrance────┘
+          │           └───────────────┘
+          │
+          │   ┌──────────────────┐   ┌──────────────────┐   ┌────────────────┐   ┌──────────┐
+          └──►│ Sophomore Forest ├──►│  Bandit Village  ├──►│ The Highlands  ├──►│  Castle  │
+              │   (transition)   │   │   TURNING POINT  │   │   (breather)   │   │ (finale) │
+              └──────────────────┘   └──────────────────┘   └────────────────┘   └──────────┘
+</code></pre>
+<p>For now though, I am just working on the hub zone - I added a few houses and trees to the terrain and it doesn&#39;t look too bad, even with a pretty low amount of effort.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/starting_off.png" alt="Starting Off"></p>
+<p>I ran some C# scripts to mass place trees and foliage in a circle around the village + added a few more houses, and suddenly, the hub started to take shape.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/blueprint.png" alt="Blueprint"></p>
+<p>The next thing for me to think about is how to occlude the loading of new scenes.  I decided to create a winding S-path to the west so I can trigger the forest zone load while the player is navigating through the trees.  We&#39;ll rely on a ridge and some fog to trigger the lowlands zone loading.  I&#39;ve also put a lot of legwork into planning multiplayer.  I think this kind of game is perfect for playing with friends, so I&#39;ve kept the idea of how these loading triggers will function in a P2P network architecture as well.  The awesome part of making a low-poly game is that the load on the client is pretty low even with a lot of stuff loaded in.  I drew up some back-of-the-envelope calculations to anticipate the demand on the client.</p>
+<p>The math for a larger combat zone with 60-80 enemies is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Estimated Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Environment triangles</td>
+<td>~5–5.5M</td>
+</tr>
+<tr>
+<td>Enemy geometry (80 enemies)</td>
+<td>~80,000 vertices (500–1,000 per enemy)</td>
+</tr>
+<tr>
+<td>Unique mesh memory</td>
+<td>~10–15 MB</td>
+</tr>
+<tr>
+<td>Total renderers</td>
+<td>~10,000–13,000</td>
+</tr>
+<tr>
+<td>Visible renderers (after frustum + LOD culling)</td>
+<td>~1,500–3,000</td>
+</tr>
+<tr>
+<td>Active enemies (within activation radius)</td>
+<td>~20–30 per player</td>
+</tr>
+</tbody></table>
+<p>Estimated peak memory (three-scene case):</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Estimated Memory</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hub mesh data</td>
+<td>~8 MB</td>
+</tr>
+<tr>
+<td>Zone_Forest mesh data</td>
+<td>~8-15 MB</td>
+</tr>
+<tr>
+<td>Zone_Lowlands mesh data (terrain + distant LODs only)</td>
+<td>~3-5 MB</td>
+</tr>
+<tr>
+<td>Persistent scenes</td>
+<td>~2-5 MB</td>
+</tr>
+<tr>
+<td>Shared textures/materials</td>
+<td>~10-20 MB</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>~31-53 MB</strong></td>
+</tr>
+</tbody></table>
+<p>Planning for a 4GB memory budget, we&#39;re doing really well.  I started adding some fog originating from the south to signal the transition into the lowlands biome - now the scene is starting to look pretty good.</p>
+<p><img src="https://elephantdoorstudios.com/blog/images/looking_better.png" alt="Looking Better"></p>
+<p>Keep an eye on this blog for updates on Warlock: Age of Entropy and my new project.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
